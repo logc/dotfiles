@@ -1,0 +1,21 @@
+[core]
+	excludesfile = ~/.gitignore_global
+[user]
+	name = Luis Osa
+	email = luis.osa.gdc@gmail.com
+[color]
+	ui = true
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	l  = log -n 10 --oneline
+	st = status
+	hist = log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset) %C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
+	dc = diff --cached
+	aa = add --all
+	prud = pull --rebase upstream develop
+[push]
+	default = simple
+[hub]
+	host = pdihub.hi.inet
