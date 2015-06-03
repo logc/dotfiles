@@ -5,7 +5,7 @@ call pathogen#infect()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-color desert                    " colorscheme
+color Tomorrow
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
@@ -26,7 +26,7 @@ set textwidth=79
 
 " ----------------------------------------------------------------------------
 " VARIABLE DEFINITIONS
-let mapleader=','
+let mapleader="\<Space>"
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
@@ -61,14 +61,11 @@ nnoremap <leader>v :s/^<C-R>=escape(b:comment_leader,'\/')<Return>//<Return>
 " Open tag under cursor in a new split
 nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-" Avoid the Esc key
-imap <Leader><Leader> <Esc>
-
 " Go to left tab
 nnoremap gr gT
 
 " Go to next split
-nnoremap <leader>w <C-w><C-w>
+nnoremap <Leader>w <C-w><C-w>
 
 " Show buffer list
 nnoremap <Leader>b :buffers<CR>
@@ -82,8 +79,9 @@ nnoremap <Leader><left> <ESC>:bp<CR>
 vnoremap <F3> "+y
 nnoremap <F3> "+p
 
-nnoremap <F4> :CtrlP<CR>
-nnoremap <F5> :Gstatus<CR>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>s :w<CR>
+nnoremap <Leader>g :Gstatus<CR>
 
 " toggle folds open and close with space if we are in a fold, otherwise normal
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
