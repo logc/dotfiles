@@ -34,6 +34,10 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
                           \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:airline#extensions#tabline#enabled = 1
