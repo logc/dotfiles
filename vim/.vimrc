@@ -5,7 +5,7 @@ call pathogen#infect()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-color Tomorrow
+color papercolor
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
@@ -52,11 +52,7 @@ let g:ctrlp_prompt_mappings = {
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:airline#extensions#tabline#enabled = 1
-
-autocmd FileType c,cpp,java           let b:comment_leader = '// '
-autocmd FileType sh,ruby,python,cfg   let b:comment_leader = '# '
-autocmd FileType haskell,sql          let b:comment_leader = '-- '
-autocmd FileType racket,lisp          let b:comment_leader = '; '
+let g:airline_theme='papercolor'
 
 " ----------------------------------------------------------------------------
 "  MAPS
@@ -68,10 +64,6 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Change directory to current buffer
 nnoremap <leader>d :cd %:h<CR>:pwd<CR>
-
-" Comment/uncomment
-nnoremap <leader>c :s/^/<C-R>=escape(b:comment_leader,'\/')<Return>/<Return>
-nnoremap <leader>v :s/^<C-R>=escape(b:comment_leader,'\/')<Return>//<Return>
 
 " Open tag under cursor in a new split
 nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
