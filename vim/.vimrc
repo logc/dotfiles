@@ -28,6 +28,17 @@ set textwidth=79
 " VARIABLE DEFINITIONS
 let mapleader="\<Space>"
 
+" Syntastic suggested settings
+" --------------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" --------------------------------------------
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
   \ 'file': '\v\.(o|a|so|pyc)$'
