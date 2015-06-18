@@ -39,6 +39,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " --------------------------------------------
+let g:syntastic_python_pylint_args="--rcfile=~/.pylintrc"
+
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
   \ 'file': '\v\.(o|a|so|pyc)$'

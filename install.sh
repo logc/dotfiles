@@ -9,3 +9,4 @@ ln -siv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -siv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -siv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -siv "$DOTFILES_DIR/vim/bundle" ~/.vim/bundle
+ln -siv "$DOTFILES_DIR/pylint/.pylintrc" ~
