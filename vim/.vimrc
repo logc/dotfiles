@@ -91,7 +91,6 @@ vnoremap <F3> "+y
 nnoremap <F3> "+p
 
 nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>s :w<CR>
 nnoremap <Leader>g :Gstatus<CR>
 
 " toggle folds open and close with space if we are in a fold, otherwise normal
