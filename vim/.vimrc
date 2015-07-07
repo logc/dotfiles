@@ -73,8 +73,13 @@ nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " Go to left tab
 nnoremap gr gT
 
-" Go to next split
+" Go to next window
 nnoremap <Leader>w <C-w><C-w>
+" Move through buffers
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Move through buffers
 nnoremap <Leader><right> <ESC>:bn<CR>
