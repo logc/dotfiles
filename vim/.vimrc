@@ -76,9 +76,6 @@ nnoremap gr gT
 " Go to next split
 nnoremap <Leader>w <C-w><C-w>
 
-" Show buffer list
-nnoremap <Leader>b :buffers<CR>
-
 " Move through buffers
 nnoremap <Leader><right> <ESC>:bn<CR>
 nnoremap <Leader><left> <ESC>:bp<CR>
