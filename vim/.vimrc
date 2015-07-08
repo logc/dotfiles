@@ -10,13 +10,11 @@ set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
 set mouse=a
-set pastetoggle=<F2>
 set backspace=indent,eol,start
 set laststatus=2
 set term=screen-256color
 
 " Highlight right margin
-set textwidth=79
 "set colorcolumn=+1
 "execute "set colorcolumn=" . join(range(81,335), ',')
 "highlight ColorColumn ctermbg=9
@@ -40,6 +38,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " --------------------------------------------
 let g:syntastic_python_pylint_args="--rcfile=~/.pylintrc"
+let g:syntastic_python_flake8_args="--max-line-length=120"
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
@@ -85,6 +84,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader><right> <ESC>:bn<CR>
 nnoremap <Leader><left> <ESC>:bp<CR>
 
+set pastetoggle=<F2>
 " Copy to and paste from OS clipboard
 "set clipboard=unnamed
 vnoremap <F3> "+y
