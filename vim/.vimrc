@@ -53,7 +53,7 @@ let g:ctrlp_prompt_mappings = {
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='solarized'
 
 " ----------------------------------------------------------------------------
 "  MAPS
