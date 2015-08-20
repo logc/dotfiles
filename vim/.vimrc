@@ -51,6 +51,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='tomorrow'
 
+let g:clang_library_path="/opt/local/libexec/llvm-3.5/lib/libclang.dylib"
 " ----------------------------------------------------------------------------
 "  MAPS
 "
