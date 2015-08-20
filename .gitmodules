@@ -7,12 +7,6 @@
 [submodule "vim/bundle/golden-ratio"]
 	path = vim/bundle/golden-ratio
 	url = git://github.com/roman/golden-ratio.git
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
 [submodule "vim/bundle/papercolor-theme"]
 	path = vim/bundle/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
