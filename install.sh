@@ -9,7 +9,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [[ -a ~/.vim/autoload/pathogen.vim ]]; then
 	echo "Pathogen already installed; skipping"
 else
-	mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+	mkdir -p ~/.vim/autoload && \
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
