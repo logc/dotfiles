@@ -8,9 +8,13 @@
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+else
+  autoload -U promptinit && promptinit
+  prompt pure
 fi
 
 # Customize to your needs...
+
 zstyle ':completion:*' special-dirs true
 
 alias pdihub=hub

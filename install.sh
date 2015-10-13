@@ -5,6 +5,17 @@
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Install pure prompt
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+	echo "Prezto is installed; use its `prompt` function"
+else
+	git clone git@github.com:sindresorhus/pure.git ~/pure
+	cd ~/pure
+       	ln -s "$PWD/pure.zsh" /usr/local/share/zsh/site-functions/prompt_pure_setup
+	ln -s "$PWD/async.zsh" /usr/local/share/zsh/site-functions/async
+	cd -
+fi
+
 # Install pathogen
 if [[ -a ~/.vim/autoload/pathogen.vim ]]; then
 	echo "Pathogen already installed; skipping"
