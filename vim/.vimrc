@@ -60,6 +60,9 @@ let g:clang_library_path="/opt/local/libexec/llvm-3.5/lib/libclang.dylib"
 nnoremap <silent> <leader>ev :tabe $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Leave Vim as background process
+nnoremap <leader>q <C-z>
+
 " Change directory to current buffer
 nnoremap <leader>d :cd %:h<CR>:pwd<CR>
 
