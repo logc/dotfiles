@@ -81,8 +81,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Move through buffers
-nnoremap <Leader>a :bn<CR>
-nnoremap <Leader>f :bp<CR>
+nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>a :bp<CR>
 
 set pastetoggle=<F2>
 " Copy to and paste from OS clipboard
