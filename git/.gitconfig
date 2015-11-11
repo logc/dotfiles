@@ -17,6 +17,6 @@
 	aa = add --all
 	prud = pull --rebase upstream develop
 [push]
-	default = simple
+	default = current
 [hub]
 	host = pdihub.hi.inet
