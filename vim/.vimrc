@@ -81,8 +81,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Move through buffers
-nnoremap <Leader><right> <ESC>:bn<CR>
-nnoremap <Leader><left> <ESC>:bp<CR>
+nnoremap <Leader>a :bn<CR>
+nnoremap <Leader>f :bp<CR>
 
 set pastetoggle=<F2>
 " Copy to and paste from OS clipboard
@@ -100,7 +100,7 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 nnoremap <Leader>p p=`]
 
 " Reflow paragraph to 80 columns
-nnoremap <Leader>f vipgq
+nnoremap <Leader>d vipgq
 
 " Maximize split window
 nnoremap <Leader>_ <C-w>_
