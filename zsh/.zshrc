@@ -20,8 +20,14 @@ zstyle ':completion:*' special-dirs true
 alias pdihub=hub
 alias work="cd ~/Documents/code/work/connect/ && source bin/activate"
 
+alias to_m4a="for infile in *.flac; do outfile=${infile%\.*}.m4a; ffmpeg -i $infile -strict experimental $outfile; done"
+
 export GITHUB_HOST=pdihub.hi.inet
 export GITHUB_USER=luis.osagomez@telefonica.com
+
+function old_prs () {
+  cd ~/Documents/code/work/oldprs/ && PDIHUB_USER=logc python main.py && cd -
+}
 
 function virtualbox () {
   command=$1
