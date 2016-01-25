@@ -5,7 +5,7 @@ call pathogen#infect()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-color Tomorrow-Night-Eighties
+color solarized
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
@@ -44,8 +44,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
   \ 'file': '\v\.(o|a|so|pyc)$'
   \ }
-let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
-                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+let g:ctrlp_extensions = ['tag', 'dir']
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:airline#extensions#tabline#enabled = 1
