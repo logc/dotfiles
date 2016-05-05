@@ -63,7 +63,7 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>q <C-z>
 
 " Change directory to current buffer
-nnoremap <leader>d :cd %:h<CR>:pwd<CR>
+nnoremap <leader>c :cd %:h<CR>:pwd<CR>
 
 " Open tag under cursor in a new split
 nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
