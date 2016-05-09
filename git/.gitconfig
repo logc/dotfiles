@@ -6,13 +6,14 @@
 [color]
 	ui = true
 [alias]
-	docommit = commit --verbose --all
-	logcommits  = log -n 10 --oneline
-	newbranch = checkout -b
-	discard = checkout --
 	amend = commit --amend
+	discard = checkout --
+	docommit = commit --verbose --all
 	hist = log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset) %C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
 	lastedit = log --pretty=format: --name-only -n 1
+	logcommits  = log -n 10 --oneline
+	newbranch = checkout -b
+	shortlog = log --oneline -n 10
 [push]
 	default = current
 [hub]
