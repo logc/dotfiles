@@ -5,8 +5,8 @@ call pathogen#infect()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-set background=dark
-color solarized
+"set background=dark
+color Tomorrow-Night
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
@@ -26,6 +26,13 @@ set term=screen-256color
 " ----------------------------------------------------------------------------
 " VARIABLE DEFINITIONS
 let mapleader="\<Space>"
+
+" --------------------------------------------
+"  OMNICOMPLETION
+set completeopt-=preview
+set completeopt=longest,menuone
+" --------------------------------------------
+
 
 " Syntastic suggested settings
 " --------------------------------------------
@@ -49,12 +56,15 @@ let g:ctrlp_extensions = ['tag', 'dir']
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='tomorrow'
 
 let g:clang_library_path="/opt/local/libexec/llvm-3.5/lib/libclang.dylib"
 " ----------------------------------------------------------------------------
 "  MAPS
 "
+
+" Omnicompletion: change behavior of <Enter> key when popup menu is visible. It will
+" simply select the highlighted menu item, just as <C-Y> does.
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Quickly edit/reload the vimrc file
 nnoremap <silent> <leader>ev :tabe $MYVIMRC<CR>
@@ -62,9 +72,6 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Leave Vim as background process
 nnoremap <leader>q <C-z>
-
-" Change directory to current buffer
-nnoremap <leader>c :cd %:h<CR>:pwd<CR>
 
 " Open tag under cursor in a new split
 nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -74,11 +81,6 @@ nnoremap gr gT
 
 " Go to next window
 nnoremap <Leader>w <C-w><C-w>
-" Move through buffers
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " Move through buffers
 nnoremap <Leader>f :bn<CR>
