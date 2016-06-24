@@ -64,3 +64,6 @@
 [submodule "vim/bundle/vim-classpath"]
 	path = vim/bundle/vim-classpath
 	url = https://github.com/tpope/vim-classpath.git
+[submodule "vim/bundle/vim-slime"]
+	path = vim/bundle/vim-slime
+	url = git://github.com/jpalardy/vim-slime.git

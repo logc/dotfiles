@@ -5,8 +5,7 @@ call pathogen#infect()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-set background=dark
-color solarized
+color Tomorrow-Night
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
@@ -52,6 +51,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='tomorrow'
 
 let g:clang_library_path="/opt/local/libexec/llvm-3.5/lib/libclang.dylib"
+
+let g:slime_target = "tmux"
 " ----------------------------------------------------------------------------
 "  MAPS
 "
