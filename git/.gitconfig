@@ -14,6 +14,7 @@
 	logcommits  = log -n 10 --oneline
 	logshort = log --oneline -n 10
 	newbranch = checkout -b
+	rmbranch = branch -d
 [push]
 	default = current
 [hub]
