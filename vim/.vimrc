@@ -102,6 +102,12 @@ nnoremap <leader>_ <C-w>_
 " Give equal size to all splits
 nnoremap <leader>= <C-w>=
 
+" Call make silently
+nnoremap <leader>m :silent make\|redraw!\|cc<CR>
+" Same as previous, but does not take automatically to location of the first
+" error, only show the quickfix window
+"nnoremap <leader>m :silent make\|redraw!\|cw<CR>
+
 " MAPS INCLUDING CTRL
 
 " Open tag under cursor in a new split
