@@ -1,7 +1,9 @@
 " ----------------------------------------------------------------------------
 " Personal preferences for vim editor
 "
-call pathogen#infect()
+"call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
