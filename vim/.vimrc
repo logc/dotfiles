@@ -124,3 +124,5 @@ nnoremap gr gT
 "set clipboard=unnamed
 vnoremap <F3> "+y
 nnoremap <F3> "+p
+
+nnoremap <F4> :r !date "+\%Y-\%m-\%d"<CR>
