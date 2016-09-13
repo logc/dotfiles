@@ -1,11 +1,12 @@
 " ----------------------------------------------------------------------------
 " Personal preferences for vim editor
 "
-call pathogen#infect()
+"call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-"set background=dark
 color solarized
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
@@ -13,6 +14,7 @@ set tags=tags;/                 " find tags in current directory, else look in e
 set mouse=a
 set backspace=indent,eol,start
 set laststatus=2
+set pastetoggle=<F2>
 if !has('nvim')
     set term=screen-256color
 endif
@@ -70,46 +72,59 @@ let g:slime_target = "tmux"
 " simply select the highlighted menu item, just as <C-Y> does.
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" MAPS INCLUDING LEADER
+
 " Quickly edit/reload the vimrc file
 nnoremap <silent> <leader>ev :tabe $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
-
-" Leave Vim as background process
-nnoremap <leader>q <C-z>
-
-" Open tag under cursor in a new split
-nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
-" Go to left tab
-nnoremap gr gT
 
 " Go to next window
 nnoremap <Leader>w <C-w><C-w>
 
 " Move through buffers
-nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>a :bp<CR>
+nnoremap <leader>f :bn<CR>
+nnoremap <leader>a :bp<CR>
 
-set pastetoggle=<F2>
+" Leave Vim as background process
+nnoremap <leader>q <C-z>
+
+" Open files via Ctrl-P plugin
+nnoremap <leader>o :CtrlP<CR>
+
+" Use Git via Fugitive plugin
+nnoremap <leader>g :Gstatus<CR>
+
+" Paste and indent according to current context
+nnoremap <leader>p p=`]
+
+" Reflow paragraph to 80 columns
+nnoremap <leader>d vipgq
+
+" Maximize split window
+nnoremap <leader>_ <C-w>_
+
+" Give equal size to all splits
+nnoremap <leader>= <C-w>=
+
+" Call make silently
+nnoremap <leader>m :silent make\|redraw!\|cc<CR>
+" Same as previous, but does not take automatically to location of the first
+" error, only show the quickfix window
+"nnoremap <leader>m :silent make\|redraw!\|cw<CR>
+
+" MAPS INCLUDING CTRL
+
+" Open tag under cursor in a new split
+nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" OTHER MAPS
+
+" Go to left tab
+nnoremap gr gT
+
 " Copy to and paste from OS clipboard
 "set clipboard=unnamed
 vnoremap <F3> "+y
 nnoremap <F3> "+p
 
-nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>g :Gstatus<CR>
-
-" toggle folds open and close with space if we are in a fold, otherwise normal
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-
-" Paste and indent according to current context
-nnoremap <Leader>p p=`]
-
-" Reflow paragraph to 80 columns
-nnoremap <Leader>d vipgq
-
-" Maximize split window
-nnoremap <Leader>_ <C-w>_
-
-" Give equal size to all splits
-nnoremap <Leader>= <C-w>=
+nnoremap <F4> :r !date "+\%Y-\%m-\%d"<CR>
