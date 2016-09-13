@@ -6,14 +6,16 @@ syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
 "set background=dark
-color Tomorrow-Night
+color solarized
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
 set mouse=a
 set backspace=indent,eol,start
 set laststatus=2
-set term=screen-256color
+if !has('nvim')
+    set term=screen-256color
+endif
 
 " Highlight right margin
 "set colorcolumn=+1
@@ -58,6 +60,8 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:airline#extensions#tabline#enabled = 1
 
 let g:clang_library_path="/opt/local/libexec/llvm-3.5/lib/libclang.dylib"
+
+let g:slime_target = "tmux"
 " ----------------------------------------------------------------------------
 "  MAPS
 "
