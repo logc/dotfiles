@@ -13,7 +13,7 @@
 	lastedit = log --pretty=format: --name-only -n 1
 	logcommits  = log -n 10 --oneline
 	logshort = log --oneline -n 10
-	newbranch = checkout -b
+	mkbranch = checkout -b
 	rmbranch = branch -d
 [push]
 	default = current
