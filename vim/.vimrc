@@ -7,7 +7,7 @@ call pathogen#helptags()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-color solarized
+color Tomorrow-Night-Eighties
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
@@ -51,6 +51,7 @@ let g:syntastic_check_on_wq = 0
 " --------------------------------------------
 let g:syntastic_python_pylint_args="--rcfile=~/.pylintrc"
 let g:syntastic_python_flake8_args="--max-line-length=120"
+let g:syntastic_enable_racket_racket_checker = 1
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
