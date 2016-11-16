@@ -50,8 +50,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " --------------------------------------------
 let g:syntastic_python_pylint_args="--rcfile=~/.pylintrc"
-let g:syntastic_python_flake8_args="--max-line-length=120"
+let g:syntastic_python_flake8_args="--max-line-length=80"
 let g:syntastic_enable_racket_racket_checker = 1
+let g:syntastic_racket_racket_args="--load"
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
@@ -108,7 +109,7 @@ nnoremap <leader>_ <C-w>_
 nnoremap <leader>= <C-w>=
 
 " Call make silently
-nnoremap <leader>m :silent make\|redraw!\|cc<CR>
+nnoremap <leader>m :silent make TARGET=%:r\|redraw!\|cc<CR>
 " Same as previous, but does not take automatically to location of the first
 " error, only show the quickfix window
 "nnoremap <leader>m :silent make\|redraw!\|cw<CR>
