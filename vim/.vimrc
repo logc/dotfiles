@@ -7,7 +7,7 @@ call pathogen#helptags()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
-color Tomorrow-Night-Eighties
+color Tomorrow-Night
 set history=800                 " keep 800 lines of history
 set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
