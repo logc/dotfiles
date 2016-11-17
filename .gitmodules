@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vim-scribble"]
 	path = vim/bundle/vim-scribble
 	url = https://github.com/nickng/vim-scribble.git
+[submodule "vim/bundle/vim-monokai"]
+	path = vim/bundle/vim-monokai
+	url = git@github.com:sickill/vim-monokai.git
