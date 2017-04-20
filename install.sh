@@ -34,3 +34,5 @@ ln -siv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -siv "$DOTFILES_DIR/vim/bundle" ~/.vim/bundle
 ln -siv "$DOTFILES_DIR/pylint/.pylintrc" ~
 ln -siv "$DOTFILES_DIR/zsh/.zshrc" ~
+ln -siv "$DOTFILES_DIR/spacemacs/.spacemacs" ~
+ln -siv "$DOTFILES_DIR/fishshell/config.fish" ~/.config/fish/
