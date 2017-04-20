@@ -1,15 +1,14 @@
 " ----------------------------------------------------------------------------
 " Personal preferences for vim editor
 "
-"call pathogen#infect()
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin on              " use the file type plugins
 filetype indent on
 color monokai
 set history=800                 " keep 800 lines of history
-set ruler                       " show the cursor position
+"set ruler                       " show the cursor position
 set tags=tags;/                 " find tags in current directory, else look in each parent directory
 set mouse=a
 set backspace=indent,eol,start
@@ -48,12 +47,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_shell = "/bin/bash"
 " --------------------------------------------
 let g:syntastic_python_pylint_args="--rcfile=~/.pylintrc"
 let g:syntastic_python_flake8_args="--max-line-length=80"
 let g:syntastic_enable_racket_racket_checker = 1
 let g:syntastic_racket_racket_args="--load"
 
+" Crlp settings
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](target|dist)|(\.(swp|ico|git|svn))$',
   \ 'file': '\v\.(o|a|so|pyc)$'

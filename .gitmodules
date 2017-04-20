@@ -76,3 +76,9 @@
 [submodule "vim/bundle/vim-monokai"]
 	path = vim/bundle/vim-monokai
 	url = git@github.com:sickill/vim-monokai.git
+[submodule "vim/bundle/vim/bundle/vim-fish"]
+	path = vim/bundle/vim/bundle/vim-fish
+	url = git@github.com:dag/vim-fish.git
+[submodule "vim/bundle/vim-fish"]
+	path = vim/bundle/vim-fish
+	url = git@github.com:dag/vim-fish.git
