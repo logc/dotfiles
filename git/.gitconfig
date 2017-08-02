@@ -2,7 +2,7 @@
 	excludesfile = ~/.gitignore_global
 [user]
 	name = Luis Osa
-	email = luis.osagomez@telefonica.com
+	email = logc@spotify.com
 [color]
 	ui = true
 [alias]
@@ -15,6 +15,9 @@
 	logshort = log --oneline -n 10
 	mkbranch = checkout -b
 	rmbranch = branch -d
+        recap = log --all --oneline --no-merges --author=logc@spotify.com
+        today = log --since=00:00:00 --all --no-merges --oneline --author=logc@spotify.com
+
 [push]
 	default = current
 [hub]
